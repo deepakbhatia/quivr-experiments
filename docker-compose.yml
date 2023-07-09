@@ -2,8 +2,6 @@ version: "3"
 
 services:
   frontend:
-    env_file:
-      - ./frontend/.env.example
     build:
       context: frontend
       dockerfile: Dockerfile
@@ -12,8 +10,6 @@ services:
     ports:
       - 3000:3000
   backend:
-    env_file:
-      - ./backend/.env.example
     build:
       context: backend
       dockerfile: Dockerfile
